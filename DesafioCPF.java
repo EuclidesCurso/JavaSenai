@@ -28,7 +28,14 @@ public class MyClass {
 		resp = 11 - (acum % 11);
 		int dig2 = (resp >= 10 ? 0 : resp);
 		
-		System.out.println(dig1 + "" + dig2);
+		int original1 = Character.getNumericValue(cpf.charAt(9));
+		int original2 = Character.getNumericValue(cpf.charAt(10));
+
+		if(dig1 == original1 && dig2 == original2)
+			System.out.println("Válido");
+		else
+			System.out.println("InVálido")
+
 
 	}
 }
